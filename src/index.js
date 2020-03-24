@@ -23,6 +23,10 @@ function handleEvent(event) {
     return Promise.resolve(null);
   }
 
+  if (event.message.text === 'ぺんた') {
+    event.message.text = 'なんだ';
+  }
+
   // create a echoing text message
   const echo = { type: 'text', text: event.message.text };
 
